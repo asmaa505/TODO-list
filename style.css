@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+}
+
+body{
+    background-color: #1e1e1e;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 100svw;
+    min-height: 100svh;
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.todo{
+    background-color: rgba(0, 0, 0, 0.705);
+    width: 50%;
+    min-height: 35em;
+    margin: auto;
+    /* !     top: 4em;     */
+    margin-top: 4em;
+    border-radius: 50px;
+    box-shadow: 0 0 20px 5px rgba(241, 77, 104, 0.916);
+    padding-bottom: 35px;
+    margin-bottom: 50px;
+}
+
+h1{
+    width: 50%;
+    height: 15%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    margin: auto;
+    color: white;
+}
+
+.todo h1::before{
+    content: "|";
+    animation: todo 3s infinite;
+    margin: auto;
+}
+
+@keyframes todo{
+    0%{
+        content: "My ";
+        margin: auto;
+    }
+    25%{
+        content: "My TO";
+        margin: auto;
+    }
+    50%{
+        content: "My TODO";
+        margin: auto;
+    }
+    75%{
+        content: "My TODO List";
+        margin: auto;
+    }
+    100%{
+        content: "My TODO List...";
+        margin: auto;
+    }
+}
+
+#in{
+    /* width: 30%; */
+    padding: 10px 15px 20px 10px;
+    /* padding-left: 20px; */
+    color: white;
+    font-size: 15px;
+    border-bottom: 3px solid rgb(232, 30, 64);
+    background-color: transparent;
+}
+
+#in::placeholder{
+    color: white;
+    font-size: 15px;
+    font-style: oblique;
+    padding-bottom: -105px;
+}
+
+.btn{
+    padding: 10px 20px;
+    color: white;
+    background-color: rgb(227, 42, 73);
+    font-size: 14px;
+    box-shadow: 0 0 50px 20px rgba(241, 77, 104, 0.916);
+    border-radius: 60px;
+    cursor: pointer;
+    transition: 2s;
+
+    &:hover{
+        box-shadow: none;
+    }
+}
+
+.green{
+    box-shadow: 0 0 50px 20px rgba(107, 167, 64, 0.916);
+    background-color: rgb(59, 137, 76);
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 20px;
+}
+
+.list{
+    color: white;
+    width: 80%;
+    height: 70%;
+    margin: auto;
+    padding-top: 35px;
+    /* !     How to show numerical order   */
+    list-style-type: decimal;
+}
+
+.done{
+    text-decoration: line-through;
+    color: gray;
+}
+
+.li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgba(220, 108, 156, 0.784);
+    padding: 25px 10px 10px;
+    /* !     How to show numerical order   */
+    list-style-type: decimal;
+}
+
+.icon_style{
+    display: flex;
+    gap: 15px;
+    font-size: 19px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+
+@media(max-width: 1440px){
+    .todo{
+        width: 75%;
+    }
+}
+
+@media(max-width: 768px){
+    h1{
+        width: 70%;
+        font-size: 23px;
+    }
+    .buttons{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .btn{
+        box-shadow: 0 0 50px 11px rgba(241, 77, 104, 0.916);
+        font-size: 13px;
+        padding: 8px 15px;
+    }
+    .green{
+        box-shadow: 0 0 50px 15px rgba(75, 164, 12, 0.916);
+    }
+}
+
+@media(max-width: 991px){
+    .todo{
+        width: 70%;
+    }
+}
+
+@media(max-width: 425px){ 
+    .todo{
+        width: 100%;
+    }
+    #in{
+        padding-left: 10px;
+        font-size: 12px;
+    }
+} 
+
+@media(max-width: 427px){ 
+    h1{
+        width: 60%;
+        font-size: 20px;
+    }
+    
+    .todo{
+        width: 80%;
+    }
+}
