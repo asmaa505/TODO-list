@@ -151,6 +151,7 @@ img{
     /* !     How to show numerical order   */
     list-style-type: decimal;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .icon_style{
@@ -190,16 +191,12 @@ img{
         left: 6%;
         top: 25px;
     }
-    li{
-        width: 70%;
-    }
 }
 
 @media(max-width: 991px){
     .todo{
         width: 70%;
     }
-
 }
 
 @media(max-width: 425px){ 
@@ -214,7 +211,6 @@ img{
         left: 10%;
         top: 25px;
     }
-
 } 
 
 @media(max-width: 427px){ 
@@ -228,8 +224,5 @@ img{
     img{
         left: 11%;
         top: 27px;
-    }
-    li{
-        width: 50%;
     }
 }
