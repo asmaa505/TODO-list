@@ -134,6 +134,7 @@ img{
     padding-top: 35px;
     /* !     How to show numerical order   */
     list-style-type: decimal;
+    width: 90%;
 }
 
 .done{
@@ -149,14 +150,16 @@ img{
     padding: 25px 10px 10px;
     /* !     How to show numerical order   */
     list-style-type: decimal;
+    flex-wrap: wrap;
 }
 
 .icon_style{
     display: flex;
-    gap: 15px;
+    gap: 25px;
     font-size: 19px;
     padding: 15px;
     cursor: pointer;
+    padding-top: 15px;
 }
 
 
@@ -187,12 +190,16 @@ img{
         left: 6%;
         top: 25px;
     }
+    li{
+        width: 70%;
+    }
 }
 
 @media(max-width: 991px){
     .todo{
         width: 70%;
     }
+
 }
 
 @media(max-width: 425px){ 
@@ -207,6 +214,7 @@ img{
         left: 10%;
         top: 25px;
     }
+
 } 
 
 @media(max-width: 427px){ 
@@ -220,5 +228,8 @@ img{
     img{
         left: 11%;
         top: 27px;
+    }
+    li{
+        width: 50%;
     }
 }
