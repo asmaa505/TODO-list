@@ -28,6 +28,7 @@ body{
     box-shadow: 0 0 20px 5px rgba(241, 77, 104, 0.916);
     padding-bottom: 35px;
     margin-bottom: 50px;
+    position: relative;
 }
 
 h1{
@@ -36,7 +37,7 @@ h1{
     padding-top: 25px;
     padding-bottom: 25px;
     margin: auto;
-    color: white;
+    color: rgb(235, 46, 77);
 }
 
 .todo h1::before{
@@ -68,18 +69,25 @@ h1{
     }
 }
 
+img{
+    width: 8%;
+    position: absolute;
+    top: 20px;
+    left: 16%;
+}
+
 #in{
     /* width: 30%; */
     padding: 10px 15px 20px 10px;
     /* padding-left: 20px; */
-    color: white;
+    color: rgb(247, 94, 94);
     font-size: 15px;
-    border-bottom: 3px solid rgb(232, 30, 64);
+    border-bottom: 3px solid rgb(239, 78, 105);
     background-color: transparent;
 }
 
 #in::placeholder{
-    color: white;
+    color: rgb(143, 82, 82);
     font-size: 15px;
     font-style: oblique;
     padding-bottom: -105px;
@@ -119,7 +127,7 @@ h1{
 }
 
 .list{
-    color: white;
+    color: rgba(255, 255, 255, 0.852);
     width: 80%;
     height: 70%;
     margin: auto;
@@ -175,6 +183,10 @@ h1{
     .green{
         box-shadow: 0 0 50px 15px rgba(75, 164, 12, 0.916);
     }
+    img{
+        left: 6%;
+        top: 25px;
+    }
 }
 
 @media(max-width: 991px){
@@ -191,6 +203,10 @@ h1{
         padding-left: 10px;
         font-size: 12px;
     }
+    img{
+        left: 10%;
+        top: 25px;
+    }
 } 
 
 @media(max-width: 427px){ 
@@ -198,8 +214,11 @@ h1{
         width: 60%;
         font-size: 20px;
     }
-    
     .todo{
         width: 80%;
+    }
+    img{
+        left: 11%;
+        top: 27px;
     }
 }
